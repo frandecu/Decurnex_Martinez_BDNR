@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Run docker compose
+docker-compose up -d
+
 # Wait for Cassandra to start
 echo "Waiting for Cassandra to start..."
 until docker exec cassandra cqlsh -e "DESCRIBE KEYSPACES"; do
