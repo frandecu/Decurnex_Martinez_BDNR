@@ -4,7 +4,8 @@
   "description": "Obligatorio Base de Datos No Relacionales - ORT Univeristy 2024",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "setup": "sh cassandra-setup.sh"
   },
   "author": "@tommympg00 @frandecu",
   "license": "ISC"
