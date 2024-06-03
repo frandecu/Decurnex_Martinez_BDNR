@@ -1,12 +1,24 @@
 #!/bin/bash
 
+# Timeout settings
+MAX_RETRIES=30
+RETRY_INTERVAL=2
+
 # Run docker compose
+echo "Starting docker-compose..."
 docker-compose up -d
 
 # Wait for Cassandra to start
 echo "Waiting for Cassandra to start..."
+RETRIES=0
 until docker exec cassandra cqlsh -e "DESCRIBE KEYSPACES"; do
-  sleep 2
+    if [ "$RETRIES" -ge "$MAX_RETRIES" ]; then
+        echo "Cassandra did not start within the timeout period. Aborting."
+        exit 1
+    fi
+    sleep $RETRY_INTERVAL
+    ((RETRIES++))
+    echo "Waiting for Cassandra to start... Attempt $RETRIES/$MAX_RETRIES"
 done
 
 # Create Keyspace
