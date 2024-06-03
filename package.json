@@ -1,0 +1,11 @@
+{
+  "name": "decurnex_martinez_bdnr",
+  "version": "1.0.0",
+  "description": "Obligatorio Base de Datos No Relacionales - ORT Univeristy 2024",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "@tommympg00 @frandecu",
+  "license": "ISC"
+}
