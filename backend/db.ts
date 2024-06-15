@@ -1,5 +1,4 @@
 import cassandra from 'cassandra-driver';
-import dotenv from 'dotenv';
 
 const createCassandraClient = () => {
   let client = null;
