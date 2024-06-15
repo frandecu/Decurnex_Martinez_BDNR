@@ -1,0 +1,19 @@
+{
+  "name": "req_5",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "test",
+    "start": "ts-node ./src/app.ts",
+    "start:dev": "ts-node -r tsconfig-paths/register --respawn --cls server.ts"
+  },
+  "dependencies": {
+    "@types/express": "^4.17.21",
+    "@types/mongoose": "^5.11.97",
+    "@types/node": "^20.14.2",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.1",
+    "typescript": "^5.4.5"
+  }
+}
