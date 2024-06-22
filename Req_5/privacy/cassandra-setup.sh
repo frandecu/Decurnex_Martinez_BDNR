@@ -11,7 +11,7 @@ docker-compose up -d
 # Wait for Cassandra to start
 echo "Waiting for Cassandra to start..."
 RETRIES=0
-until docker exec cassandra cqlsh -e "DESCRIBE KEYSPACES"; do
+until docker exec privacy-container cqlsh -e "DESCRIBE KEYSPACES"; do
     if [ "$RETRIES" -ge "$MAX_RETRIES" ]; then
         echo "Cassandra did not start within the timeout period. Aborting."
         exit 1
@@ -22,12 +22,12 @@ until docker exec cassandra cqlsh -e "DESCRIBE KEYSPACES"; do
 done
 
 # Create Keyspace
-docker exec -i cassandra cqlsh <<EOF
+docker exec -i privacy-container cqlsh <<EOF
 CREATE KEYSPACE IF NOT EXISTS game_tracking WITH REPLICATION = {'class': 'SimpleStrategy', 'replication_factor': 1};
 EOF
 
 # Create Tables
-docker exec -i cassandra cqlsh -k game_tracking <<EOF
+docker exec -i privacy-container cqlsh -k game_tracking <<EOF
 CREATE TABLE IF NOT EXISTS user_permissions (
     user_id UUID,
     item_type TEXT,

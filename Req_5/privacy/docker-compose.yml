@@ -3,7 +3,7 @@ version: "3.8"
 services:
   cassandra:
     image: cassandra:latest
-    container_name: cassandra
+    container_name: privacy-container
     ports:
       - "9042:9042"
     environment:
