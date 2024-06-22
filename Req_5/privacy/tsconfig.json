@@ -9,13 +9,13 @@
     "skipLibCheck": true /* Skip type checking all .d.ts files. */,
     "baseUrl": ".",
     "paths": {
-      "@/config": ["backend/config"],
-      "@/controllers": ["backend/controllers"],
-      "@/middlewares": ["backend/middlewares"],
-      "@repositories": ["backend/repositories"],
-      "@/types": ["backend/types"],
-      "@/seeders": ["backend/db/seeders"],
-      "@/utils": ["backend/utils"]
+      "@/config": ["privacy/config"],
+      "@/controllers": ["privacy/controllers"],
+      "@/middlewares": ["privacy/middlewares"],
+      "@repositories": ["privacy/repositories"],
+      "@/types": ["privacy/types"],
+      "@/seeders": ["privacy/db/seeders"],
+      "@/utils": ["privacy/utils"]
     }
   }
 }

@@ -1,4 +1,5 @@
 import { Request, Response } from "express";
+import mongoose from "mongoose";
 
 import User, { User as UserModel } from "../models/user.model";
 
@@ -7,6 +8,13 @@ export const createUser = async (
   res: Response
 ): Promise<void> => {
   try {
+    const email = req.body.email;
+    const existingUser: UserModel | null = await User.findOne({ email: email });
+    if (existingUser) {
+      res.status(400).json({ message: "User already exists" });
+      return;
+    }
+
     const user: UserModel = new User(req.body);
     const newUser: UserModel = await user.save();
     res.status(201).json(newUser);
@@ -27,12 +35,14 @@ export const getAllUsers = async (
   }
 };
 
-export const getUserById = async (
+export const getUserByEmail = async (
   req: Request,
   res: Response
 ): Promise<void> => {
   try {
-    const user: UserModel | null = await User.findById(req.params.id);
+    const user: UserModel | null = await User.findOne({
+      email: req.params.email,
+    });
     if (!user) {
       res.status(404).json({ message: "User not found" });
       return;
