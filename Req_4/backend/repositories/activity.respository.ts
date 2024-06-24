@@ -1,11 +1,15 @@
 import { dbInstance } from '../db';
 
+import { types } from 'cassandra-driver';
+
 export const ActivityRepository = {
-  async createUserActivity(userId, gameId, timestamp, activityType, activityData) {
+  async createUserActivity(userId, gameId, activityType, activityData) {
+    const timestamp = types.TimeUuid.now().getDate();
+
     const client = await dbInstance.getInstance();
     const query = `INSERT INTO user_activity (user_id, game_id, timestamp, activity_type, activity_data) VALUES (?, ?, ?, ?, ?)`;
-    const boundValues = [userId, gameId, timestamp, activityType, JSON.stringify(activityData)];
-    await client.execute(query, boundValues);
+    const boundValues = [userId, gameId, timestamp, activityType, activityData];
+    await client.execute(query, boundValues, { prepare: true });
   },
   async getUserActivity(userId, gameId) {
     const client = await dbInstance.getInstance();

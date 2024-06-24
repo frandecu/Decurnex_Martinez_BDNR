@@ -5,10 +5,9 @@ import { ActivityRepository } from '../repositories';
 export const ActivityController = {
   async createUserActivity(req: Request, res: Response) {
     const { userId, gameId, activityType, activityData } = req.body;
-    const timestamp = Date.now();
 
     try {
-      await ActivityRepository.createUserActivity(userId, gameId, timestamp, activityType, activityData);
+      await ActivityRepository.createUserActivity(userId, gameId, activityType, activityData);
       res.json({ message: 'Activity created successfully' });
     } catch (err) {
       console.error('Error creating activity:', err);
