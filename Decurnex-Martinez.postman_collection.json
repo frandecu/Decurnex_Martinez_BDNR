@@ -1,0 +1,496 @@
+{
+	"info": {
+		"_postman_id": "2be41636-2ac9-452b-be39-3752e9851ce5",
+		"name": "BDNR",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22988493"
+	},
+	"item": [
+		{
+			"name": "Req_4",
+			"item": [
+				{
+					"name": "Activity",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": \"550e8400-e29b-41d4-a716-446655440000\",\n    \"gameId\": \"550e8400-e29b-41d4-a716-446655440001\",\n    \"activityType\": \"playtime\",\n    \"activityData\": {\n        \"duration\": \"210\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/activities",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"activities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Activities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/activities",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"activities"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/activities",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"activities"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "5161"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1429-rywMBl0wwhl4svmC7w+KY9DoVVg\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Jun 2024 22:50:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"user_id\": \"4f850160-0597-4d4d-b5f6-a7c12d142bbe\",\n        \"game_id\": \"9de2cd0c-11f9-42fe-b3ad-23fe641590ba\",\n        \"timestamp\": \"2024-06-24T20:49:48.459Z\",\n        \"activity_data\": {\n            \"achievement_id\": \"1236\",\n            \"description\": \"Third Blood\"\n        },\n        \"activity_type\": \"achievement\"\n    },\n    {\n        \"user_id\": \"d73f65df-8b8c-45f8-a485-e15bc7c434d9\",\n        \"game_id\": \"fcec4bf8-e445-4039-a412-61e17f095313\",\n        \"timestamp\": \"2024-06-24T20:49:48.458Z\",\n        \"activity_data\": {\n            \"achievement_id\": \"1235\",\n            \"description\": \"Second Blood\"\n        },\n        \"activity_type\": \"achievement\"\n    },\n    {\n        \"user_id\": \"882b62ee-45e5-4faa-8c90-2facd1f7f26c\",\n        \"game_id\": \"afdad05d-ac37-4766-8d3e-80012c28a063\",\n        \"timestamp\": \"2024-06-24T20:49:48.446Z\",\n        \"activity_data\": {\n            \"ip\": \"192.168.1.1\"\n        },\n        \"activity_type\": \"login\"\n    },\n    {\n        \"user_id\": \"550e8400-e29b-41d4-a716-446655440000\",\n        \"game_id\": \"550e8400-e29b-41d4-a716-446655440001\",\n        \"timestamp\": \"2024-06-24T22:50:30.691Z\",\n        \"activity_data\": {\n            \"duration\": \"210\"\n        },\n        \"activity_type\": \"playtime\"\n    },\n    {\n        \"user_id\": \"550e8400-e29b-41d4-a716-446655440000\",\n        \"game_id\": \"c56a4180-65aa-42ec-a945-5fd21dec0538\",\n        \"timestamp\": \"2024-06-24T22:40:52.850Z\",\n        \"activity_data\": {\n            \"achievementId\": \"12345\",\n            \"description\": \"Completed level 1\"\n        },\n        \"activity_type\": \"achievement\"\n    },\n    {\n        \"user_id\": \"cddcdf34-1b16-40b1-a115-7780243aebf6\",\n        \"game_id\": \"bf235560-3988-4ada-9b38-4f58761ce35d\",\n        \"timestamp\": \"2024-06-24T20:49:48.461Z\",\n        \"activity_data\": {\n            \"experience\": \"1500\",\n            \"level\": \"5\"\n        },\n        \"activity_type\": \"level_up\"\n    },\n    {\n        \"user_id\": \"547d63ae-997c-4a65-b458-e9b85e560551\",\n        \"game_id\": \"3ab165a1-e4f7-4845-9ed8-398a75691918\",\n        \"timestamp\": \"2024-06-24T20:49:48.456Z\",\n        \"activity_data\": {\n            \"achievement_id\": \"1234\",\n            \"description\": \"First Blood\"\n        },\n        \"activity_type\": \"achievement\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get All Activities From User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/activities/550e8400-e29b-41d4-a716-446655440000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"activities",
+								"550e8400-e29b-41d4-a716-446655440000"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/activities/550e8400-e29b-41d4-a716-446655440000",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"activities",
+										"550e8400-e29b-41d4-a716-446655440000"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4027"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"fbb-poNstQLs2HUdYkF+ungjFPrXTts\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Jun 2024 22:52:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"user_id\": \"550e8400-e29b-41d4-a716-446655440000\",\n        \"game_id\": \"550e8400-e29b-41d4-a716-446655440001\",\n        \"timestamp\": \"2024-06-24T22:50:30.691Z\",\n        \"activity_data\": {\n            \"duration\": \"210\"\n        },\n        \"activity_type\": \"playtime\"\n    },\n    {\n        \"user_id\": \"550e8400-e29b-41d4-a716-446655440000\",\n        \"game_id\": \"c56a4180-65aa-42ec-a945-5fd21dec0538\",\n        \"timestamp\": \"2024-06-24T22:40:52.850Z\",\n        \"activity_data\": {\n            \"achievementId\": \"12345\",\n            \"description\": \"Completed level 1\"\n        },\n        \"activity_type\": \"achievement\"\n    },\n    {\n        \"user_id\": \"550e8400-e29b-41d4-a716-446655440000\",\n        \"game_id\": \"c56a4180-65aa-42ec-a945-5fd21dec0538\",\n        \"timestamp\": \"2024-06-24T22:40:01.172Z\",\n        \"activity_data\": {\n            \"0\": \"{\",\n            \"1\": \"\\\"\",\n            \"2\": \"a\",\n            \"3\": \"c\",\n            \"4\": \"h\",\n            \"5\": \"i\",\n            \"6\": \"e\",\n            \"7\": \"v\",\n            \"8\": \"e\",\n            \"9\": \"m\",\n            \"10\": \"e\",\n            \"11\": \"n\",\n            \"12\": \"t\",\n            \"13\": \"I\",\n            \"14\": \"d\",\n            \"15\": \"\\\"\",\n            \"16\": \":\",\n            \"17\": \"\\\"\",\n            \"18\": \"1\",\n            \"19\": \"2\",\n            \"20\": \"3\",\n            \"21\": \"4\",\n            \"22\": \"5\",\n            \"23\": \"\\\"\",\n            \"24\": \",\",\n            \"25\": \"\\\"\",\n            \"26\": \"d\",\n            \"27\": \"e\",\n            \"28\": \"s\",\n            \"29\": \"c\",\n            \"30\": \"r\",\n            \"31\": \"i\",\n            \"32\": \"p\",\n            \"33\": \"t\",\n            \"34\": \"i\",\n            \"35\": \"o\",\n            \"36\": \"n\",\n            \"37\": \"\\\"\",\n            \"38\": \":\",\n            \"39\": \"\\\"\",\n            \"40\": \"C\",\n            \"41\": \"o\",\n            \"42\": \"m\",\n            \"43\": \"p\",\n            \"44\": \"l\",\n            \"45\": \"e\",\n            \"46\": \"t\",\n            \"47\": \"e\",\n            \"48\": \"d\",\n            \"49\": \" \",\n            \"50\": \"l\",\n            \"51\": \"e\",\n            \"52\": \"v\",\n            \"53\": \"e\",\n            \"54\": \"l\",\n            \"55\": \" \",\n            \"56\": \"1\",\n            \"57\": \"\\\"\",\n            \"58\": \"}\"\n        },\n        \"activity_type\": \"achievement\"\n    },\n    {\n        \"user_id\": \"550e8400-e29b-41d4-a716-446655440000\",\n        \"game_id\": \"c56a4180-65aa-42ec-a945-5fd21dec0538\",\n        \"timestamp\": \"2024-06-24T22:39:26.284Z\",\n        \"activity_data\": {\n            \"0\": \"{\",\n            \"1\": \"\\\"\",\n            \"2\": \"a\",\n            \"3\": \"c\",\n            \"4\": \"h\",\n            \"5\": \"i\",\n            \"6\": \"e\",\n            \"7\": \"v\",\n            \"8\": \"e\",\n            \"9\": \"m\",\n            \"10\": \"e\",\n            \"11\": \"n\",\n            \"12\": \"t\",\n            \"13\": \"I\",\n            \"14\": \"d\",\n            \"15\": \"\\\"\",\n            \"16\": \":\",\n            \"17\": \"\\\"\",\n            \"18\": \"1\",\n            \"19\": \"2\",\n            \"20\": \"3\",\n            \"21\": \"4\",\n            \"22\": \"5\",\n            \"23\": \"\\\"\",\n            \"24\": \",\",\n            \"25\": \"\\\"\",\n            \"26\": \"d\",\n            \"27\": \"e\",\n            \"28\": \"s\",\n            \"29\": \"c\",\n            \"30\": \"r\",\n            \"31\": \"i\",\n            \"32\": \"p\",\n            \"33\": \"t\",\n            \"34\": \"i\",\n            \"35\": \"o\",\n            \"36\": \"n\",\n            \"37\": \"\\\"\",\n            \"38\": \":\",\n            \"39\": \"\\\"\",\n            \"40\": \"C\",\n            \"41\": \"o\",\n            \"42\": \"m\",\n            \"43\": \"p\",\n            \"44\": \"l\",\n            \"45\": \"e\",\n            \"46\": \"t\",\n            \"47\": \"e\",\n            \"48\": \"d\",\n            \"49\": \" \",\n            \"50\": \"l\",\n            \"51\": \"e\",\n            \"52\": \"v\",\n            \"53\": \"e\",\n            \"54\": \"l\",\n            \"55\": \" \",\n            \"56\": \"1\",\n            \"57\": \"\\\"\",\n            \"58\": \"}\"\n        },\n        \"activity_type\": \"achievement\"\n    },\n    {\n        \"user_id\": \"550e8400-e29b-41d4-a716-446655440000\",\n        \"game_id\": \"c56a4180-65aa-42ec-a945-5fd21dec0538\",\n        \"timestamp\": \"2024-06-24T22:39:16.185Z\",\n        \"activity_data\": {\n            \"0\": \"{\",\n            \"1\": \"\\\"\",\n            \"2\": \"a\",\n            \"3\": \"c\",\n            \"4\": \"h\",\n            \"5\": \"i\",\n            \"6\": \"e\",\n            \"7\": \"v\",\n            \"8\": \"e\",\n            \"9\": \"m\",\n            \"10\": \"e\",\n            \"11\": \"n\",\n            \"12\": \"t\",\n            \"13\": \"I\",\n            \"14\": \"d\",\n            \"15\": \"\\\"\",\n            \"16\": \":\",\n            \"17\": \"\\\"\",\n            \"18\": \"1\",\n            \"19\": \"2\",\n            \"20\": \"3\",\n            \"21\": \"4\",\n            \"22\": \"5\",\n            \"23\": \"\\\"\",\n            \"24\": \",\",\n            \"25\": \"\\\"\",\n            \"26\": \"d\",\n            \"27\": \"e\",\n            \"28\": \"s\",\n            \"29\": \"c\",\n            \"30\": \"r\",\n            \"31\": \"i\",\n            \"32\": \"p\",\n            \"33\": \"t\",\n            \"34\": \"i\",\n            \"35\": \"o\",\n            \"36\": \"n\",\n            \"37\": \"\\\"\",\n            \"38\": \":\",\n            \"39\": \"\\\"\",\n            \"40\": \"C\",\n            \"41\": \"o\",\n            \"42\": \"m\",\n            \"43\": \"p\",\n            \"44\": \"l\",\n            \"45\": \"e\",\n            \"46\": \"t\",\n            \"47\": \"e\",\n            \"48\": \"d\",\n            \"49\": \" \",\n            \"50\": \"l\",\n            \"51\": \"e\",\n            \"52\": \"v\",\n            \"53\": \"e\",\n            \"54\": \"l\",\n            \"55\": \" \",\n            \"56\": \"1\",\n            \"57\": \"\\\"\",\n            \"58\": \"}\"\n        },\n        \"activity_type\": \"achievement\"\n    },\n    {\n        \"user_id\": \"550e8400-e29b-41d4-a716-446655440000\",\n        \"game_id\": \"c56a4180-65aa-42ec-a945-5fd21dec0538\",\n        \"timestamp\": \"2024-06-24T22:39:08.723Z\",\n        \"activity_data\": {\n            \"0\": \"{\",\n            \"1\": \"\\\"\",\n            \"2\": \"a\",\n            \"3\": \"c\",\n            \"4\": \"h\",\n            \"5\": \"i\",\n            \"6\": \"e\",\n            \"7\": \"v\",\n            \"8\": \"e\",\n            \"9\": \"m\",\n            \"10\": \"e\",\n            \"11\": \"n\",\n            \"12\": \"t\",\n            \"13\": \"I\",\n            \"14\": \"d\",\n            \"15\": \"\\\"\",\n            \"16\": \":\",\n            \"17\": \"\\\"\",\n            \"18\": \"1\",\n            \"19\": \"2\",\n            \"20\": \"3\",\n            \"21\": \"4\",\n            \"22\": \"5\",\n            \"23\": \"\\\"\",\n            \"24\": \",\",\n            \"25\": \"\\\"\",\n            \"26\": \"d\",\n            \"27\": \"e\",\n            \"28\": \"s\",\n            \"29\": \"c\",\n            \"30\": \"r\",\n            \"31\": \"i\",\n            \"32\": \"p\",\n            \"33\": \"t\",\n            \"34\": \"i\",\n            \"35\": \"o\",\n            \"36\": \"n\",\n            \"37\": \"\\\"\",\n            \"38\": \":\",\n            \"39\": \"\\\"\",\n            \"40\": \"C\",\n            \"41\": \"o\",\n            \"42\": \"m\",\n            \"43\": \"p\",\n            \"44\": \"l\",\n            \"45\": \"e\",\n            \"46\": \"t\",\n            \"47\": \"e\",\n            \"48\": \"d\",\n            \"49\": \" \",\n            \"50\": \"l\",\n            \"51\": \"e\",\n            \"52\": \"v\",\n            \"53\": \"e\",\n            \"54\": \"l\",\n            \"55\": \" \",\n            \"56\": \"1\",\n            \"57\": \"\\\"\",\n            \"58\": \"}\"\n        },\n        \"activity_type\": \"achievement\"\n    },\n    {\n        \"user_id\": \"550e8400-e29b-41d4-a716-446655440000\",\n        \"game_id\": \"c56a4180-65aa-42ec-a945-5fd21dec0538\",\n        \"timestamp\": \"2024-06-24T22:39:04.204Z\",\n        \"activity_data\": {\n            \"0\": \"{\",\n            \"1\": \"\\\"\",\n            \"2\": \"a\",\n            \"3\": \"c\",\n            \"4\": \"h\",\n            \"5\": \"i\",\n            \"6\": \"e\",\n            \"7\": \"v\",\n            \"8\": \"e\",\n            \"9\": \"m\",\n            \"10\": \"e\",\n            \"11\": \"n\",\n            \"12\": \"t\",\n            \"13\": \"I\",\n            \"14\": \"d\",\n            \"15\": \"\\\"\",\n            \"16\": \":\",\n            \"17\": \"\\\"\",\n            \"18\": \"1\",\n            \"19\": \"2\",\n            \"20\": \"3\",\n            \"21\": \"4\",\n            \"22\": \"5\",\n            \"23\": \"\\\"\",\n            \"24\": \",\",\n            \"25\": \"\\\"\",\n            \"26\": \"d\",\n            \"27\": \"e\",\n            \"28\": \"s\",\n            \"29\": \"c\",\n            \"30\": \"r\",\n            \"31\": \"i\",\n            \"32\": \"p\",\n            \"33\": \"t\",\n            \"34\": \"i\",\n            \"35\": \"o\",\n            \"36\": \"n\",\n            \"37\": \"\\\"\",\n            \"38\": \":\",\n            \"39\": \"\\\"\",\n            \"40\": \"C\",\n            \"41\": \"o\",\n            \"42\": \"m\",\n            \"43\": \"p\",\n            \"44\": \"l\",\n            \"45\": \"e\",\n            \"46\": \"t\",\n            \"47\": \"e\",\n            \"48\": \"d\",\n            \"49\": \" \",\n            \"50\": \"l\",\n            \"51\": \"e\",\n            \"52\": \"v\",\n            \"53\": \"e\",\n            \"54\": \"l\",\n            \"55\": \" \",\n            \"56\": \"1\",\n            \"57\": \"\\\"\",\n            \"58\": \"}\"\n        },\n        \"activity_type\": \"achievement\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get All Activities From User Given a Game",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/activities/550e8400-e29b-41d4-a716-446655440000/c56a4180-65aa-42ec-a945-5fd21dec0538",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"activities",
+								"550e8400-e29b-41d4-a716-446655440000",
+								"c56a4180-65aa-42ec-a945-5fd21dec0538"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/activities/550e8400-e29b-41d4-a716-446655440000/c56a4180-65aa-42ec-a945-5fd21dec0538",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"activities",
+										"550e8400-e29b-41d4-a716-446655440000",
+										"c56a4180-65aa-42ec-a945-5fd21dec0538"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "244"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f4-Mgf/ivUk8lYBTgscPcOLJqkz5+c\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Jun 2024 22:53:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user_id\": \"550e8400-e29b-41d4-a716-446655440000\",\n    \"game_id\": \"c56a4180-65aa-42ec-a945-5fd21dec0538\",\n    \"timestamp\": \"2024-06-24T22:40:52.850Z\",\n    \"activity_data\": {\n        \"achievementId\": \"12345\",\n        \"description\": \"Completed level 1\"\n    },\n    \"activity_type\": \"achievement\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Req_5",
+			"item": [
+				{
+					"name": "Users",
+					"item": [
+						{
+							"name": "Post User",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"example@example.com\",\n    \"password\": \"hashed_password\",\n    \"username\": \"example_user\",\n    \"profileImage\": \"path/to/image\",\n    \"bio\": \"This is an example bio\",\n    \"friends\": [\n        \"60d0fe4f5311236168a109ca\",\n        \"60d0fe4f5311236168a109cb\"\n    ],\n    \"wishlist\": [\n        \"60d0fe4f5311236168a109cc\",\n        \"60d0fe4f5311236168a109cd\"\n    ],\n    \"privacySettings\": {\n        \"profileVisibility\": \"public\",\n        \"activityVisibility\": \"public\",\n        \"messagePermissions\": \"everyone\"\n    },\n    \"securitySettings\": {\n        \"twoFactorAuthEnabled\": false,\n        \"backupCodes\": [\n            \"backupCode1\",\n            \"backupCode2\"\n        ]\n    },\n    \"gameLibrary\": [\n        \"60d0fe4f5311236168a109ce\",\n        \"60d0fe4f5311236168a109cf\"\n    ],\n    \"badges\": [\n        \"60d0fe4f5311236168a109d0\"\n    ],\n    \"inventory\": [\n        \"60d0fe4f5311236168a109d1\"\n    ],\n    \"screenshots\": [\n        \"60d0fe4f5311236168a109d2\"\n    ],\n    \"videos\": [\n        \"60d0fe4f5311236168a109d3\"\n    ],\n    \"workshopItems\": [\n        \"60d0fe4f5311236168a109d4\"\n    ],\n    \"reviews\": [\n        \"60d0fe4f5311236168a109d5\"\n    ],\n    \"guides\": [\n        \"60d0fe4f5311236168a109d6\"\n    ],\n    \"artwork\": [\n        \"60d0fe4f5311236168a109d7\"\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/user",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3001/user",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get by Email",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3001/user/example@example.com",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"user",
+										"example@example.com"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Put User",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"profileImage\": \"\",\n    \"bio\": \"Another bio\",\n    \"friends\": [\n        \"60d0fe4f5311236168a109ca\",\n        \"60d0fe4f5311236168a109cb\"\n    ],\n    \"wishlist\": [\n        \"60d0fe4f5311236168a109cc\",\n        \"60d0fe4f5311236168a109cd\"\n    ],\n    \"privacySettings\": {\n        \"profileVisibility\": \"public\",\n        \"activityVisibility\": \"public\",\n        \"messagePermissions\": \"everyone\"\n    },\n    \"securitySettings\": {\n        \"twoFactorAuthEnabled\": false,\n        \"backupCodes\": [\n            \"backupCode1\",\n            \"backupCode2\"\n        ]\n    },\n    \"gameLibrary\": [\n        \"60d0fe4f5311236168a109ce\",\n        \"60d0fe4f5311236168a109cf\"\n    ],\n    \"badges\": [\n        \"60d0fe4f5311236168a109d0\"\n    ],\n    \"inventory\": [\n        \"60d0fe4f5311236168a109d1\"\n    ],\n    \"screenshots\": [\n        \"60d0fe4f5311236168a109d2\"\n    ],\n    \"videos\": [\n        \"60d0fe4f5311236168a109d3\"\n    ],\n    \"workshopItems\": [\n        \"60d0fe4f5311236168a109d4\"\n    ],\n    \"reviews\": [\n        \"60d0fe4f5311236168a109d5\"\n    ],\n    \"guides\": [\n        \"60d0fe4f5311236168a109d6\"\n    ],\n    \"artwork\": [\n        \"60d0fe4f5311236168a109d7\"\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/user/6676e5e414866d768f056417",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"user",
+										"6676e5e414866d768f056417"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete User",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3001/user/6676e19fac76733599e1218e",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"user",
+										"6676e19fac76733599e1218e"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Privacy",
+					"item": [
+						{
+							"name": "Post permission",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_id\": \"660e8400-e29b-41d4-a716-446655440010\",\n    \"item_type\": \"community\",\n    \"item_id\": \"660e8400-e29b-41d4-a716-446655440011\",\n    \"permission_type\": \"edit\",\n    \"allowed_users\": [\n        \"660e8400-e29b-41d4-a716-446655440012\",\n        \"660e8400-e29b-41d4-a716-446655440013\"\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3002/permissions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3002",
+									"path": [
+										"permissions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3002/permissions/660e8400-e29b-41d4-a716-446655440010",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3002",
+									"path": [
+										"permissions",
+										"660e8400-e29b-41d4-a716-446655440010"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3002/permissions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3002",
+									"path": [
+										"permissions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3002/permissions/550e8400-e29b-41d4-a716-446655440000/profile/550e8400-e29b-41d4-a716-446655440001/view",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3002",
+									"path": [
+										"permissions",
+										"550e8400-e29b-41d4-a716-446655440000",
+										"profile",
+										"550e8400-e29b-41d4-a716-446655440001",
+										"view"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
