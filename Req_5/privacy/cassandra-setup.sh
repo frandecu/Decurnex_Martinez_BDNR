@@ -38,4 +38,14 @@ CREATE TABLE IF NOT EXISTS user_permissions (
 );
 EOF
 
-echo "Tables created successfully."
+# Seed DB
+echo "Seeding the database..."
+docker exec -i privacy-container cqlsh -k game_tracking <<EOF
+INSERT INTO user_permissions (user_id, item_type, item_id, permission_type, allowed_users) VALUES (uuid(), 'game', uuid(), 'view', {uuid(), uuid()});
+INSERT INTO user_permissions (user_id, item_type, item_id, permission_type, allowed_users) VALUES (uuid(), 'game', uuid(), 'edit', {uuid()});
+INSERT INTO user_permissions (user_id, item_type, item_id, permission_type, allowed_users) VALUES (uuid(), 'profile', uuid(), 'view', {uuid(), uuid(), uuid()});
+INSERT INTO user_permissions (user_id, item_type, item_id, permission_type, allowed_users) VALUES (uuid(), 'feed', uuid(), 'view', {uuid(), uuid(), uuid()});
+INSERT INTO user_permissions (user_id, item_type, item_id, permission_type, allowed_users) VALUES (uuid(), 'friend list', uuid(), 'view', {uuid(), uuid(), uuid()});
+EOF
+
+echo "Tables created and data seeded successfully."

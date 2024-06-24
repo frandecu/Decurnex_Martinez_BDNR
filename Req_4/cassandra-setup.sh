@@ -38,4 +38,14 @@ CREATE TABLE IF NOT EXISTS user_activity (
 ) WITH CLUSTERING ORDER BY (game_id ASC, timestamp DESC);
 EOF
 
-echo "Tables created successfully."
+# Seed DB
+echo "Seeding the database..."
+docker exec -i activity-container cqlsh -k game_tracking <<EOF
+INSERT INTO user_activity (user_id, game_id, timestamp, activity_type, activity_data) VALUES (uuid(), uuid(), toTimestamp(now()), 'login', {'ip': '192.168.1.1'});
+INSERT INTO user_activity (user_id, game_id, timestamp, activity_type, activity_data) VALUES (uuid(), uuid(), toTimestamp(now()), 'achievement', {'achievement_id': '1234', 'description': 'First Blood'});
+INSERT INTO user_activity (user_id, game_id, timestamp, activity_type, activity_data) VALUES (uuid(), uuid(), toTimestamp(now()), 'achievement', {'achievement_id': '1235', 'description': 'Second Blood'});
+INSERT INTO user_activity (user_id, game_id, timestamp, activity_type, activity_data) VALUES (uuid(), uuid(), toTimestamp(now()), 'achievement', {'achievement_id': '1236', 'description': 'Third Blood'});
+INSERT INTO user_activity (user_id, game_id, timestamp, activity_type, activity_data) VALUES (uuid(), uuid(), toTimestamp(now()), 'level_up', {'level': '5', 'experience': '1500'});
+EOF
+
+echo "Tables created and data seeded successfully."
