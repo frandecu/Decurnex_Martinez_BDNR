@@ -6,12 +6,13 @@
   "scripts": {
     "test": "test",
     "start": "ts-node ./src/app.ts",
-    "start:dev": "ts-node -r tsconfig-paths/register --respawn --cls server.ts"
+    "start:dev": "ts-node -r tsconfig-paths/register --respawn --cls app.ts"
   },
   "dependencies": {
     "@types/node": "^20.14.7",
     "cassandra-driver": "^4.7.2",
     "express": "^4.19.2",
+    "ts-node": "^10.9.2",
     "typescript": "^5.5.2"
   },
   "devDependencies": {

@@ -3,7 +3,7 @@ import express from 'express';
 import { ApiRouter } from './routes/routes';
 import { errorHandler } from './middlewares';
 
-const port = 3000;
+const port = 3002;
 
 const app = express();
 

@@ -5,7 +5,7 @@ import UserRouter from "./routes/users.route";
 import { errorHandler } from "./middlewares/errorHandler";
 
 const app = express();
-const PORT = 3000;
+const PORT = 3001;
 
 const MONGO_URI = process.env.MONGO_URI || "mongodb://localhost:27017/User";
 mongoose
